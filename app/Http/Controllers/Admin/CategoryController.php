@@ -81,7 +81,7 @@ class CategoryController extends Controller
         else
         $categories =  Category::with('subCategories')->withCount('subCategories')->where('parent_id',null)->get();
         
-        return  view('admin.categories.show',compact('categories'));
+        return  view('admin.categories.show',compact('categories','id'));
     }
 
     /**
